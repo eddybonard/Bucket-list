@@ -1,0 +1,49 @@
+#description{
+            text-align: justify;
+            width: auto;
+        color: wheat;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 5px;
+
+}
+
+#section_detail{
+        background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('../img/vacance-plage.jpg');
+        background-repeat: no-repeat;
+        background-size: auto;
+}
+
+.description{
+        display: flex;
+        justify-content: center;
+
+
+}
+
+label{
+        display: block;
+}
+
+
+
+#form{
+        border:1px solid darkgoldenrod;
+        text-align: center;
+        width: 50%;
+        border-radius: 10px;
+        box-shadow: 20px 20px darkgoldenrod;
+        margin: auto;
+        padding-bottom: 10px;
+
+
+}
+
+textarea,
+input{
+        box-sizing: border-box;
+        width: 300px;
+        max-width: 70%;
+        resize: none;
+}

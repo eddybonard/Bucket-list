@@ -1,0 +1,43 @@
+{% extends 'bucketList.html.twig' %}
+
+{% block title %}{{ parent() }} - Formulaire{% endblock %}
+
+{% block body %}
+    <div class="jumbotron text-center mr-5 ml-5 mt-3 bg-warning">
+        <h2>Ajouter un wish</h2>
+    </div>
+                <div class="mt-5 mb-5" id="form" >
+                    {{ form_start(wishForm) }}
+                    {% if form_errors(wishForm)  %}
+                         <div class="alert alert-danger mt-3"> {{ form_errors(wishForm) }}</div>
+                    {% endif %}
+
+                    {% if form_errors(wishForm.title)  %}
+                      <div class="alert alert-danger mt-3"> {{ form_errors(wishForm.title) }}</div>
+                    {% endif %}
+                    {{ form_label(wishForm.title) }}
+                    {{ form_widget(wishForm.title) }}
+
+                    {% if form_errors(wishForm.description)  %}
+                        <div class="alert alert-danger mt-3"> {{ form_errors(wishForm.description) }}</div>
+                    {% endif %}
+                    {{ form_label(wishForm.description) }}
+                    {{ form_widget(wishForm.description) }}
+
+                    {% if form_errors(wishForm.author)  %}
+                        <div class="alert alert-danger mt-3" > {{ form_errors(wishForm.author) }}</div>
+                    {% endif %}
+                    {{ form_label(wishForm.author) }}
+                    {{ form_widget(wishForm.author) }}
+
+
+                    <div class="mt-2">
+                        <button class="btn btn-outline-success">Enregistrer</button>&nbsp;<button  class="btn btn-danger " type="reset" >Annuler</button>
+                    </div>
+                    {{ form_end(wishForm) }}
+
+                </div>
+{% endblock %}
+
+
+

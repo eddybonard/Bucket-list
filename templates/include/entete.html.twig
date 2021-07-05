@@ -16,13 +16,16 @@
                 <div class="container">
                     <ul class="navbar-nav no-wrap me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class=" nav-link active  " href="{{ path('main_home') }}">Accueil</a>
+                            <a class=" nav-link active  " href="{{ path('main_home') }}" title="Accueil">Accueil</a>
                         </li>
                         <li class="nav-item " style="white-space: nowrap;">
-                            <a class=" nav-link  " href="{{ path('main_aboutUs') }}">About Us</a>
+                            <a class=" nav-link  " href="{{ path('main_aboutUs') }}" title="Nous">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class=" nav-link " href="{{ path('wish_listes') }}">Wish</a>
+                            <a class=" nav-link " href="{{ path('wish_listes') }}" title="Wish-List">WishList</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class=" nav-link " href="{{ path('main_formulaire') }}" title="Ajouter">+Wish</a>
                         </li>
                     </ul>
                 </div>
