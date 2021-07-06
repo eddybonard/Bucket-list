@@ -47,3 +47,7 @@ input{
         max-width: 70%;
         resize: none;
 }
+
+#categorieName{
+        font-style: italic;
+}

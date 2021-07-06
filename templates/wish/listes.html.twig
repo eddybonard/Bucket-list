@@ -22,6 +22,7 @@
                                 <div class="card-text">
                                     <p>Par {{ wish.author }}<br>
                                         {{ wish.dateCreated | date('d/m/Y') }}</p>
+                                    <p>Categorie : {{  wish.category.name }}</p>
                                     <a href="{{ path('wish_details', {'id': wish.id}) }}"><button class="btn btn-outline-primary">Détails</button></a>
                                 </div>
                             </div>

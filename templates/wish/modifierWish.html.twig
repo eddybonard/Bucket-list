@@ -1,0 +1,20 @@
+{% extends 'bucketList.html.twig' %}
+
+{% block title %}{{ parent() }} - Modification{% endblock %}
+
+{% block body %}
+    <div class="jumbotron text-center mr-5 ml-5 mt-3 bg-warning">
+        <h2><a href="{{ path('wish_details', {'id' : wish.id})  }}" title="Wish-List" class="text-decoration-none text-dark">Modifier "{{ wish.title }}"</a></h2>
+    </div>
+    <div class="ml-5">
+        {% include ('include/_formulaire.html.twig') %}
+        <div class="mt-2 mb-3">
+            <button class="btn btn-outline-success">Modifier</button> <a href="{{ path('wish_supprimer', {'id': wish.id}) }}" class="btn btn-danger">Supprimer</a>
+        </div>
+        {{ form_end(wishForm) }}
+    </div>
+
+{% endblock %}
+
+
+
