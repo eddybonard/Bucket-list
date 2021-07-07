@@ -24,9 +24,34 @@
                         <li class="nav-item">
                             <a class=" nav-link " href="{{ path('wish_listes') }}" title="Wish-List">WishList</a>
                         </li>
-                        <li class="nav-item">
-                            <a class=" nav-link " href="{{ path('main_formulaire') }}" title="Ajouter">+Wish</a>
-                        </li>
+                        {% if app.user %}
+                            <li class="nav-item">
+                                <a class=" nav-link " href="{{ path('main_formulaire') }}" title="Ajouter">+Wish</a>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="deroulantb" data-toggle="dropdown" >
+                                        {{ app.user.pseudo }}
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-lg-right " aria-labelledby="deroulantb" >
+                                        <p class="dropdown-item">Votre adresse :<br> {{ app.user.email }}</p><hr>
+                                        <a class="  dropdown-item " href="{{ path('app_logout') }}" title="logout">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-vinyl-fill" viewBox="0 0 16 16" style="color: red;">
+                                            <path d="M8 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0 3a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+                                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4 8a4 4 0 1 0 8 0 4 4 0 0 0-8 0z"/>
+                                            </svg>
+                                        Deconnexion</a>
+                                    </div>
+                                </div>
+                            </li>
+                        {% else %}
+                            <li class="nav-item">
+                                <a style="white-space: nowrap;" class=" nav-link " href="{{ path('app_login') }}" title="Ajouter">Connectez-vous</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class=" nav-link " href="{{ path('app_register') }}" title="Ajouter">Inscription</a>
+                            </li>
+                        {% endif %}
                     </ul>
                 </div>
             </div>

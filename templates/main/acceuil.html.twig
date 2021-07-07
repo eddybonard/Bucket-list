@@ -2,7 +2,19 @@
 
 {% block body %}
     <div class="jumbotron text-center mr-5 ml-5 mt-3">
-        <h2>Bienvenue sur "Bucket-list"</h2>
+        {% if app.user %}
+            <h2>Bienvenue {{ app.user.pseudo }}</h2>
+        {% else %}
+            <h2>Bienvenue sur "Bucket-list"</h2>
+        {% endif %}
+    </div>
+
+    <div class="text-center">
+        <h1>Nos locaux :</h1>
+        <div class="text-center" >  <iframe src="{{ url }}" width="400" height="300" style="border-radius: 50px;border: 0;" allowfullscreen="" loading="lazy">
+
+            </iframe>
+        </div>
     </div>
 
 {% endblock %}
