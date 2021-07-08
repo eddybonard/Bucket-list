@@ -34,7 +34,8 @@
                                         {{ app.user.pseudo }}
                                     </button>
                                     <div class="dropdown-menu dropdown-menu-lg-right " aria-labelledby="deroulantb" >
-                                        <p class="dropdown-item">Votre adresse :<br> {{ app.user.email }}</p><hr>
+                                        <p class="dropdown-item"  >Votre adresse :<br> {{ app.user.email }}</p><hr>
+                                        <a class="dropdown-item" href="{{ path('user_modification',{'id': app.user.id}) }}" title="modifier">Profil</a><hr>
                                         <a class="  dropdown-item " href="{{ path('app_logout') }}" title="logout">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-vinyl-fill" viewBox="0 0 16 16" style="color: red;">
                                             <path d="M8 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0 3a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>

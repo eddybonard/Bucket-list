@@ -1,4 +1,6 @@
 twig:
     default_path: '%kernel.project_dir%/templates'
    # form_themes: ['bootstrap_base_layout.html.twig']
+    globals:
+        url_map: '%env(APP_URLMAP)%'
 

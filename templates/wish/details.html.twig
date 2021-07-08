@@ -18,10 +18,15 @@
                 <b>{{ wish.description }}</b>
             </p>
         </div>
-
+        {% if app.user.pseudo == wish.author %}
         <div class="text-center">
             <a href="{{ path('wish_formulaireModifier', {'id':wish.id}) }}" title="Modifier" class="btn btn-outline-info">Mofifier</a>
         </div>
+        {% else %}
+        <div class="text-center">
+            <a href="#" title="commenter" class="btn btn-outline-info">Commenter</a>
+        </div>
+        {% endif %}
 
     </section>
 {% endblock %}
