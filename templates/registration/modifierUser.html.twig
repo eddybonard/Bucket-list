@@ -14,32 +14,35 @@
     </div>
 
     <div class="ml-5 w-50 mb-3">
-        {% form_theme registrationForm "bootstrap_4_layout.html.twig" %}
-        {{ form_start(registrationForm) }}
-        {% if form_errors(registrationForm)  %}
-            {{ form_errors(registrationForm) }}
+        {% form_theme modificationForm "bootstrap_4_layout.html.twig" %}
+        {{ form_start(modificationForm) }}
+        {% if form_errors(modificationForm)  %}
+            {{ form_errors(modificationForm) }}
         {% endif %}
 
-        {{ form_label(registrationForm.nom) }}
-        {{ form_widget(registrationForm.nom) }}
+        {{ form_label(modificationForm.nom) }}
+        {{ form_widget(modificationForm.nom) }}
 
-        {{ form_label(registrationForm.prenom) }}
-        {{ form_widget(registrationForm.prenom) }}
+        {{ form_label(modificationForm.prenom) }}
+        {{ form_widget(modificationForm.prenom) }}
 
-        {{ form_label(registrationForm.pseudo) }}
-        {{ form_widget(registrationForm.pseudo) }}
+        {{ form_label(modificationForm.pseudo) }}
+        {{ form_widget(modificationForm.pseudo) }}
 
-        {{ form_label(registrationForm.email) }}
-        {{ form_widget(registrationForm.email) }}
+        {{ form_label(modificationForm.email) }}
+        {{ form_widget(modificationForm.email) }}
 
-        {{ form_label(registrationForm.plainPassword) }}
-        {{ form_widget(registrationForm.plainPassword) }}
+        {{ form_label(modificationForm.plainPassword) }}
+        {{ form_widget(modificationForm.plainPassword) }}
+
+        {{ form_label(modificationForm.confMdp) }}
+        {{ form_widget(modificationForm.confMdp) }}
 
 
         <div class="mt-3">
-            <button type="submit" class="btn btn-outline-success">Modification</button>&nbsp; <a href="{{ path('user_delete', {'id': app.user.id}) }}" class="btn btn-danger">Supprimer</a>
+            <button type="submit"  class="btn btn-outline-success">Modification</button>&nbsp; <a href="{{ path('user_delete', {'id': app.user.id}) }}" class="btn btn-danger">Supprimer mon compte</a>
         </div>
-        {{ form_end(registrationForm) }}
+        {{ form_end(modificationForm) }}
     </div>
 
 {% endblock %}
