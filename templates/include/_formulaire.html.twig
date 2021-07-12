@@ -16,5 +16,9 @@
                     {{ form_label(wishForm.author) }}
                     {{ form_widget(wishForm.author) }}
 
-                    {{ form_label(wishForm.category) }}
-                    {{ form_widget(wishForm.category) }}
+                    <div class="w-50">
+                        {{ form_label(wishForm.category) }}
+                        {{ form_widget(wishForm.category) }}
+
+                        {{ form_row(wishForm.image)}}
+                    </div>
